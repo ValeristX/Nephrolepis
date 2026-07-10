@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.valerist.nephrolepis.item.ModItems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -24,6 +25,9 @@ public class Nephrolepis
     public Nephrolepis(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
+        ModItems.register(modEventBus);
+
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
