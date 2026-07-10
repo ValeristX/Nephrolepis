@@ -1,7 +1,20 @@
 {
   "variants": {
-    "": {
-      "model": "nephrolepis:block/plant_matter_block"
+    "facing=east": {
+      "model": "nephrolepis:block/plant_matter_block",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "nephrolepis:block/plant_matter_block",
+      "y": 0
+    },
+    "facing=south": {
+      "model": "nephrolepis:block/plant_matter_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "nephrolepis:block/plant_matter_block",
+      "y": 270
     }
   }
 }
