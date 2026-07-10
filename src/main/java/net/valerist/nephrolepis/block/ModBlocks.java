@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.valerist.nephrolepis.Nephrolepis;
+import net.valerist.nephrolepis.block.custom.FernBlock;
 import net.valerist.nephrolepis.item.ModItems;
 
 import java.util.function.Supplier;
@@ -20,6 +21,8 @@ public class ModBlocks {
 
      public static final RegistryObject<Block> PLANT_MATTER_BLOCK = registerFuelBlock("plant_matter_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK))); // call this when making new blocks
+    public static final RegistryObject<Block> FERN = registerBlock("fern",
+            () -> new FernBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noOcclusion())); // call this when making new blocks
 
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
