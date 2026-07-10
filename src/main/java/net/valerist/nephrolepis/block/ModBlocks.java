@@ -20,13 +20,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PLANT_MATTER_BLOCK = registerBlock("plant_matter_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK))); // call this when making new blocks
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
+
+    public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockitem(name, toReturn);
+        ModItems.ITEMS.register(name, () -> new BlockItem(toReturn.get(), new Item.Properties()));
         return toReturn;
-    }
-    private static<T extends Block>RegistryObject<Item> registerBlockitem(String name, RegistryObject<T> block){
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus){

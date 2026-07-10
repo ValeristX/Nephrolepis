@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "nephrolepis:craftable_into_plant_matter"
+    },
+    {
+      "tag": "nephrolepis:craftable_into_plant_matter"
+    },
+    {
+      "tag": "nephrolepis:craftable_into_plant_matter"
+    },
+    {
+      "tag": "nephrolepis:craftable_into_plant_matter"
+    }
+  ],
+  "result": {
+    "id": "nephrolepis:plant_matter_block",
+    "count": 1
+  }
+}
