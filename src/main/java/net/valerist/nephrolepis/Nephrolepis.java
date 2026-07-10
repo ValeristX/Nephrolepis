@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.valerist.nephrolepis.block.ModBlocks;
 import net.valerist.nephrolepis.item.ModCreativeModTabs;
 import net.valerist.nephrolepis.item.ModItems;
 import org.slf4j.Logger;
@@ -27,6 +28,7 @@ public class Nephrolepis
         IEventBus modEventBus = context.getModEventBus();
         ModCreativeModTabs.register(modEventBus); // our creative mode tab
         ModItems.register(modEventBus); // items
+        ModBlocks.register(modEventBus); // blocks
 
 
         // Register ourselves for server and other game events we are interested in
