@@ -3,6 +3,7 @@ package net.valerist.nephrolepis.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import net.valerist.nephrolepis.Nephrolepis;
@@ -15,7 +16,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(ModBlocks.PLANT_MATTER_BLOCK);
+        //blockWithItem(ModBlocks.PLANT_MATTER_BLOCK);
+
+        simpleBlock(ModBlocks.FERN.get());
+            new ModelFile.UncheckedModelFile(modLoc("block/fern"));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){
