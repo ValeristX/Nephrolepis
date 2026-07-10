@@ -29,6 +29,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> TINY_GRASS = registerBlock("tiny_grass",
             () -> new TinyPlantBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion()));
+    public static final RegistryObject<Block> CRAWLING_PETALS = registerBlock("crawling_petals",
+            () -> new TinyPlantBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion()));
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
