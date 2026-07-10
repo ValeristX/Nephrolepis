@@ -1,7 +1,20 @@
 {
   "variants": {
-    "": {
-      "model": "nephrolepis:block/crawling_petals"
+    "facing=east": {
+      "model": "nephrolepis:block/crawling_petals",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "nephrolepis:block/crawling_petals",
+      "y": 0
+    },
+    "facing=south": {
+      "model": "nephrolepis:block/crawling_petals",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "nephrolepis:block/crawling_petals",
+      "y": 270
     }
   }
 }

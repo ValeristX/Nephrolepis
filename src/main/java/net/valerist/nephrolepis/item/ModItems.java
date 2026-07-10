@@ -12,7 +12,9 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, Nephrolepis.MODID);
 
     public static final RegistryObject<Item> FERN_LEAF = ITEMS.register("fern_leaf",
-            () -> new Item(new Item.Properties())); // call this when making new items
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MYSTERY_DYE = ITEMS.register("mystery_dye",
+            () -> new Item(new Item.Properties()));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
