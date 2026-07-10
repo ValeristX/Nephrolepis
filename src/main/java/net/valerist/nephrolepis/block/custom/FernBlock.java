@@ -12,7 +12,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class FernBlock extends BaseEntityBlock {
-    public static final VoxelShape SHAPE = Block.box(0,0,0,16,16,16);
+    public static final VoxelShape SHAPE = Block.box(0,0,0,16,12,16);
     public FernBlock(Properties pProperties) {
         super(pProperties);
     }
