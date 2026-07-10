@@ -2,6 +2,7 @@ package net.valerist.nephrolepis.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
@@ -31,5 +32,13 @@ public class FernBlock extends BaseEntityBlock {
     @Override
     public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
         return null;
+    }
+
+    @Override
+    public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        BlockPos below = pos.below();
+        BlockState stateBelow = level.getBlockState(below);
+
+        return stateBelow.isSolidRender(level, below);
     }
 }
