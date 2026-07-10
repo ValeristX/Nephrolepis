@@ -1,5 +1,6 @@
 package net.valerist.nephrolepis.item;
 
+import net.minecraft.world.item.Item;
 import net.valerist.nephrolepis.Nephrolepis;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -17,9 +18,11 @@ public class ModCreativeModTabs {
     public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("tutorial_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.FERN_LEAF.get()))
                     .title(Component.translatable("creativetab.tutorial_tab"))
-                    .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.FERN_LEAF.get());
-                        output.accept(Items.DIAMOND);
+                    .displayItems((pParameters, pOutput) -> {
+                        for(RegistryObject<Item> item : ModItems.ITEMS.getEntries()) {
+                            pOutput.accept(item.get());
+                        }
+                        pOutput.accept(Items.DIAMOND);
                     })
                     .build());
 

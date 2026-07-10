@@ -13,21 +13,20 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.valerist.nephrolepis.item.ModCreativeModTabs;
 import net.valerist.nephrolepis.item.ModItems;
 import org.slf4j.Logger;
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(Nephrolepis.MODID)
 public class Nephrolepis
 {
-    // Define mod id in a common place for everything to reference
     public static final String MODID = "nephrolepis";
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
     public Nephrolepis(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
-        ModItems.register(modEventBus);
+        ModCreativeModTabs.register(modEventBus); // our creative mode tab
+        ModItems.register(modEventBus); // items
 
 
         // Register ourselves for server and other game events we are interested in
@@ -35,17 +34,7 @@ public class Nephrolepis
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
-
-        // creative mode tab
-        modEventBus.addListener(this::addCreative);
     }
-
-    private void addCreative(BuildCreativeModeTabContentsEvent event){
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.FERN_LEAF);
-        }
-    }
-
 
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
