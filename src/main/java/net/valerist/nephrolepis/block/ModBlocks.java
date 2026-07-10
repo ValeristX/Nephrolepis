@@ -22,7 +22,7 @@ public class ModBlocks {
      public static final RegistryObject<Block> PLANT_MATTER_BLOCK = registerFuelBlock("plant_matter_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK))); // call this when making new blocks
     public static final RegistryObject<Block> FERN = registerBlock("fern",
-           () -> new FernBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noOcclusion())); // call this when making new blocks
+           () -> new FernBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission())); // call this when making new blocks
 
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
