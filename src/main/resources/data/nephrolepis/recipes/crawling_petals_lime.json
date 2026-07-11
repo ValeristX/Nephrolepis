@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "nephrolepis:crawling_petals"
+  },
+  "result": "minecraft:lime_dye",
+  "count": 3
+}

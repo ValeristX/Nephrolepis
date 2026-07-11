@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "nephrolepis:fern_leaf"
+    },
+    {
+      "item": "nephrolepis:fern_leaf"
+    },
+    {
+      "item": "nephrolepis:fern_leaf"
+    }
+  ],
+  "result": {
+    "item": "nephrolepis:fern"
+  }
+}
