@@ -4,6 +4,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.GrassBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -11,6 +12,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.valerist.nephrolepis.Nephrolepis;
+import net.valerist.nephrolepis.block.custom.FernBlock;
 import net.valerist.nephrolepis.block.custom.LargePlantBlock;
 import net.valerist.nephrolepis.block.custom.RotationalBlock;
 import net.valerist.nephrolepis.block.custom.TinyPlantBlock;
@@ -28,7 +30,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> PLANT_MATTER_BLOCK = registerFuelBlock("plant_matter_block",
             () -> new RotationalBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK)));
     public static final RegistryObject<Block> FERN = registerBlock("fern",
-           () -> new LargePlantBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion()));
+           () -> new FernBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion()));
+    public static final RegistryObject<Block> POTTED_FERN = BLOCKS.register("potted_fern",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.FERN,
+            BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
 
     public static final RegistryObject<Block> TINY_GRASS = registerBlock("tiny_grass",
             () -> new TinyPlantBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion().instabreak()));

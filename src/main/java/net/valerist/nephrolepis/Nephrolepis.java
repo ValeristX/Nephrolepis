@@ -3,6 +3,8 @@ package net.valerist.nephrolepis;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -12,6 +14,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.valerist.nephrolepis.block.ModBlocks;
 import net.valerist.nephrolepis.item.ModCreativeModTabs;
@@ -29,6 +32,7 @@ public class Nephrolepis
         ModCreativeModTabs.register(modEventBus); // our creative mode tab
         ModItems.register(modEventBus); // items
         ModBlocks.register(modEventBus); // blocks
+        modEventBus.addListener(this::commonSetup);
 
 
         // Register ourselves for server and other game events we are interested in
@@ -39,7 +43,12 @@ public class Nephrolepis
     }
 
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.FERN.getId(), ModBlocks.POTTED_FERN);
+        });
+    }
+
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
@@ -47,7 +56,6 @@ public class Nephrolepis
         LOGGER.info("HELLO from server starting");
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {

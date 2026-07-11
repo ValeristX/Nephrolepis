@@ -21,9 +21,12 @@ public class ModCreativeModTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.FERN_LEAF.get()))
                     .title(Component.translatable("creativetab.tutorial_tab"))
                     .displayItems((pParameters, pOutput) -> {
-                        for(RegistryObject<Block> block : ModBlocks.BLOCKS.getEntries()) {
-                            pOutput.accept(block.get());
-                        }
+                        pOutput.accept(ModBlocks.SEED_BENCH.get());
+                        pOutput.accept(ModBlocks.PLANT_MATTER_BLOCK.get());
+                        pOutput.accept(ModBlocks.FERN.get());
+                        pOutput.accept(ModBlocks.CRAWLING_PETALS.get());
+                        pOutput.accept(ModBlocks.TINY_GRASS.get());
+
                         for(RegistryObject<Item> item : ModItems.ITEMS.getEntries()) {
                             pOutput.accept(item.get());
                         }

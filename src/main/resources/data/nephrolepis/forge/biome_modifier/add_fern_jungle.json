@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": "minecraft:jungle",
+  "biomes": "#minecraft:is_jungle",
   "features": "nephrolepis:fern_jungle_placed",
   "step": "raw_generation"
 }

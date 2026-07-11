@@ -4,6 +4,7 @@ import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 import net.valerist.nephrolepis.block.ModBlocks;
 import net.valerist.nephrolepis.item.ModItems;
@@ -22,6 +23,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.TINY_GRASS.get());
         this.dropSelf(ModBlocks.CRAWLING_PETALS.get());
         this.dropOther(ModBlocks.FERN.get(), ModItems.FERN_LEAF.get());
+        this.add(ModBlocks.POTTED_FERN.get(), createPotFlowerItemTable(ModBlocks.FERN.get()));
     }
 
     @Override
