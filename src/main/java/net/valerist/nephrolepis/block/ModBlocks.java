@@ -16,10 +16,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.valerist.nephrolepis.Nephrolepis;
-import net.valerist.nephrolepis.block.custom.FernBlock;
-import net.valerist.nephrolepis.block.custom.LargePlantBlock;
-import net.valerist.nephrolepis.block.custom.RotationalBlock;
-import net.valerist.nephrolepis.block.custom.TinyPlantBlock;
+import net.valerist.nephrolepis.block.custom.*;
 import net.valerist.nephrolepis.item.ModItems;
 
 import java.util.function.Supplier;
@@ -46,7 +43,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRAWLING_PETALS = registerBlock("crawling_petals",
             () -> new TinyPlantBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion()));
     public static final RegistryObject<Block> GIANT_PUFFBALL = registerBlock("giant_puffball",
-            () -> new LargePlantBlock(BlockBehaviour.Properties.copy(Blocks.MUSHROOM_STEM).noCollission().noOcclusion()));
+            () -> new PuffballBlock(BlockBehaviour.Properties.copy(Blocks.MUSHROOM_STEM).noOcclusion()));
 
 
 
