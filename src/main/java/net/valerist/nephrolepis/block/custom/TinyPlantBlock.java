@@ -16,18 +16,10 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class TinyPlantBlock extends Block {
-    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-    public static Boolean MAKENORTHSIDEOFBLOCKFACEPLAYER = true;
+public class TinyPlantBlock extends RotationalBlock {
     public static final VoxelShape SHAPE = Block.box(0,0,0,16,2,16);
     public TinyPlantBlock(Properties pProperties) {
         super(pProperties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
-    }
-    public TinyPlantBlock(Properties pProperties, Boolean makeNorthSideOfBlockFacePlayer) {
-        super(pProperties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
-        this.MAKENORTHSIDEOFBLOCKFACEPLAYER = makeNorthSideOfBlockFacePlayer;
     }
 
     @Override
@@ -36,42 +28,10 @@ public class TinyPlantBlock extends Block {
     }
 
     @Override
-    public RenderShape getRenderShape(BlockState pState) {
-        return RenderShape.MODEL;
-    }
-
-    @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         BlockPos below = pos.below();
         BlockState stateBelow = level.getBlockState(below);
 
         return stateBelow.isSolidRender(level, below);
-    }
-
-    @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
-    }
-
-    @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
-        if(MAKENORTHSIDEOFBLOCKFACEPLAYER) {
-            return this.defaultBlockState()
-                    .setValue(FACING, context.getHorizontalDirection().getOpposite());
-        } else {
-            return this.defaultBlockState()
-                    .setValue(FACING, context.getHorizontalDirection());
-        }
-    }
-
-    @Override
-    public BlockState rotate(BlockState state, Rotation rotation) {
-        return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
-    }
-
-    @Override
-    public BlockState mirror(BlockState state, Mirror mirror) {
-        return state.rotate(mirror.getRotation(state.getValue(FACING)));
-
     }
 }
