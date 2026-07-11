@@ -30,7 +30,7 @@ public class ModBlocks {
            () -> new LargePlantBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion()));
 
     public static final RegistryObject<Block> TINY_GRASS = registerBlock("tiny_grass",
-            () -> new TinyPlantBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion()));
+            () -> new TinyPlantBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion().instabreak()));
     public static final RegistryObject<Block> CRAWLING_PETALS = registerBlock("crawling_petals",
             () -> new TinyPlantBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion()));
 
