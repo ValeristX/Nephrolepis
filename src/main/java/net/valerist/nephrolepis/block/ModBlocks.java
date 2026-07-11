@@ -45,6 +45,8 @@ public class ModBlocks {
             () -> new TinyPlantBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion().instabreak().mapColor(MapColor.PLANT)));
     public static final RegistryObject<Block> CRAWLING_PETALS = registerBlock("crawling_petals",
             () -> new TinyPlantBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion()));
+    public static final RegistryObject<Block> GIANT_PUFFBALL = registerBlock("giant_puffball",
+            () -> new LargePlantBlock(BlockBehaviour.Properties.copy(Blocks.MUSHROOM_STEM).noCollission().noOcclusion()));
 
 
 

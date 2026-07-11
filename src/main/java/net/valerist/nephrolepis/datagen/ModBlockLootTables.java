@@ -21,9 +21,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.PLANT_MATTER_BLOCK.get());
         this.dropSelf(ModBlocks.SEED_BENCH.get());
         this.dropSelf(ModBlocks.TINY_GRASS.get());
+        this.dropSelf(ModBlocks.TINY_GRASS_EDGE.get());
         this.dropSelf(ModBlocks.CRAWLING_PETALS.get());
         this.dropOther(ModBlocks.FERN.get(), ModItems.FERN_LEAF.get());
         this.add(ModBlocks.POTTED_FERN.get(), createPotFlowerItemTable(ModBlocks.FERN.get()));
+        this.dropSelf(ModBlocks.GIANT_PUFFBALL.get());
     }
 
     @Override
