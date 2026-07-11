@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": "minecraft:plains",
+  "biomes": "#minecraft:is_forest",
   "features": "nephrolepis:tiny_grass_plains_placed",
   "step": "raw_generation"
 }
