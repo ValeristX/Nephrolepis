@@ -41,7 +41,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> TINY_GRASS_EDGE = registerBlock("tiny_grass_edge",
             () -> new TinyPlantBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion().instabreak().mapColor(MapColor.PLANT)));
     public static final RegistryObject<Block> CRAWLING_PETALS = registerBlock("crawling_petals",
-            () -> new TinyPlantBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion()));
+            () -> new CrawlingPetalsBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion()));
     public static final RegistryObject<Block> GIANT_PUFFBALL = registerBlock("giant_puffball",
             () -> new PuffballBlock(BlockBehaviour.Properties.copy(Blocks.MUSHROOM_STEM).noOcclusion()));
     public static final RegistryObject<Block> STINGING_NETTLE = registerBlock("stinging_nettle",

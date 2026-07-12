@@ -70,6 +70,42 @@
                 "offset": [
                   -1,
                   0,
+                  0
+                ],
+                "tag": "minecraft:logs"
+              },
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  1,
+                  0,
+                  0
+                ],
+                "tag": "minecraft:logs"
+              },
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  0,
+                  0,
+                  1
+                ],
+                "tag": "minecraft:logs"
+              },
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  0,
+                  0,
+                  -1
+                ],
+                "tag": "minecraft:logs"
+              },
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  -1,
+                  0,
                   -1
                 ],
                 "tag": "minecraft:logs"
