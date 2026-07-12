@@ -25,6 +25,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.PLANT_MATTER_BLOCK.get());
                         pOutput.accept(ModBlocks.FERN.get());
                         pOutput.accept(ModBlocks.GIANT_PUFFBALL.get());
+                        pOutput.accept(ModBlocks.STINGING_NETTLE.get());
                         pOutput.accept(ModBlocks.CRAWLING_PETALS.get());
                         pOutput.accept(ModBlocks.TINY_GRASS.get());
 

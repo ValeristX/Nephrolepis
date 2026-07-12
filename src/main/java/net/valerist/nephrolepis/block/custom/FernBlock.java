@@ -17,7 +17,6 @@ public class FernBlock extends LargePlantBlock implements BonemealableBlock {
         super(pProperties);
     }
 
-    // bonemeal
 
     public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState, boolean value) {
         return levelReader.getBlockState(blockPos.above()).isAir();

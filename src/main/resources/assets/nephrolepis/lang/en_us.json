@@ -1,5 +1,6 @@
 {
   "item.nephrolepis.fern_leaf": "Fern Leaf",
+  "item.nephrolepis.nettle_leaf": "Nettle Leaf",
 
   "block.nephrolepis.plant_matter_block": "Block of Plant Matter",
   "block.nephrolepis.seed_bench": "Seed Bench",
@@ -8,6 +9,7 @@
   "block.nephrolepis.tiny_grass": "Tiny Grass",
   "block.nephrolepis.tiny_grass_edge": "Centered Tiny Grass",
   "block.nephrolepis.crawling_petals": "Crawling Petals",
+  "block.nephrolepis.stinging_nettle": "Stinging Nettle",
 
   "creativetab.tutorial_tab": "Nephrolepis"
 }

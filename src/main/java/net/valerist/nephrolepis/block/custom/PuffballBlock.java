@@ -4,25 +4,31 @@ import net.minecraft.client.particle.Particle;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.client.event.sound.SoundEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.valerist.nephrolepis.item.ModItems;
 
 
-public class PuffballBlock extends RotationalBlock {
+public class PuffballBlock extends RotationalBlock implements BonemealableBlock{
     public PuffballBlock(Properties pProperties) {
         super(pProperties);
     }
@@ -54,5 +60,16 @@ public class PuffballBlock extends RotationalBlock {
         for (double i = 0; i <= 5; i++) {
             pLevel.addParticle(ParticleTypes.CLOUD, pPos.getX()+i/10, pPos.getY(), pPos.getZ()+i/10, 0.0, 0.9, 0.0);
         }
+    }
+
+    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState, boolean value) {
+        return levelReader.getBlockState(blockPos.above()).isAir();
+    }
+    public boolean isBonemealSuccess(Level level, RandomSource randomSource, BlockPos blockPos, BlockState blockState) {
+        return true;
+    }
+
+    public void performBonemeal(ServerLevel level, RandomSource randomSource, BlockPos blockPos, BlockState blockState) {
+        level.addFreshEntity(new ItemEntity(level, blockPos.getX(), blockPos.getY(), blockPos.getZ(), new ItemStack(ModItems.FERN_LEAF.get())));
     }
 }

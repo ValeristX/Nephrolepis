@@ -2,7 +2,12 @@
   "required": false,
   "values": [
     "nephrolepis:fern_leaf",
+    "nephrolepis:nettle_leaf",
+    "nephrolepis:fern",
+    "nephrolepis:crawling_petals",
     "nephrolepis:tiny_grass",
+    "nephrolepis:tiny_grass_edge",
+    "nephrolepis:giant_puffball",
     "minecraft:grass",
     "minecraft:tall_grass"
   ]

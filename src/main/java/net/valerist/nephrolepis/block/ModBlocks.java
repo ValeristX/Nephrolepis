@@ -44,6 +44,8 @@ public class ModBlocks {
             () -> new TinyPlantBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion()));
     public static final RegistryObject<Block> GIANT_PUFFBALL = registerBlock("giant_puffball",
             () -> new PuffballBlock(BlockBehaviour.Properties.copy(Blocks.MUSHROOM_STEM).noOcclusion()));
+    public static final RegistryObject<Block> STINGING_NETTLE = registerBlock("stinging_nettle",
+            () -> new NettleBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion()));
 
 
 
