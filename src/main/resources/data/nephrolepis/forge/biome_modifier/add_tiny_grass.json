@@ -1,0 +1,7 @@
+{
+  "type": "forge:add_features",
+  "biomes": ["minecraft:birch_forest", "minecraft:dark_forest","minecraft:flower_forest",
+    "minecraft:forest", "minecraft:plains", "minecraft:meadow","minecraft:sunflower_plains"],
+  "features": "nephrolepis:tiny_grass_placed",
+  "step": "raw_generation"
+}

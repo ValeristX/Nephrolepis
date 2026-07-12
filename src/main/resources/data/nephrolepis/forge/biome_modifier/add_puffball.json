@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": ["minecraft:plains", "minecraft:meadow", "minecraft:windswept_hills", "minecraft:sunflower_plains"],
+  "features": "nephrolepis:puffball_placed",
+  "step": "raw_generation"
+}

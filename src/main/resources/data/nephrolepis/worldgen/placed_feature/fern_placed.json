@@ -1,9 +1,9 @@
 {
-  "feature": "nephrolepis:patch_fern_jungle",
+  "feature": "nephrolepis:patch_fern",
   "placement": [
     {
       "type": "minecraft:count_on_every_layer",
-      "count": 3
+      "count": 2
     },
     {
       "type": "minecraft:biome"

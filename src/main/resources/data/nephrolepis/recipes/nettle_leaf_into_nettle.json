@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "nephrolepis:nettle_leaf"
+    },
+    {
+      "item": "nephrolepis:nettle_leaf"
+    },
+    {
+      "item": "nephrolepis:nettle_leaf"
+    }
+  ],
+  "result": {
+    "item": "nephrolepis:stinging_nettle"
+  }
+}

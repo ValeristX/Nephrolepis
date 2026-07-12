@@ -1,14 +1,19 @@
 package net.valerist.nephrolepis.block.custom;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.valerist.nephrolepis.item.ModItems;
 import net.valerist.nephrolepis.tag.ModTags;
 
-public class NettleBlock extends LargePlantBlock{
+public class NettleBlock extends LargePlantBlock implements BonemealableBlock {
 
     public NettleBlock(Properties pProperties) {
         super(pProperties);
@@ -32,5 +37,16 @@ public class NettleBlock extends LargePlantBlock{
         if(damage){
             pEntity.hurt(pLevel.damageSources().cactus(), 0.5F);
         }
+    }
+
+    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState, boolean value) {
+        return levelReader.getBlockState(blockPos.above()).isAir();
+    }
+    public boolean isBonemealSuccess(Level level, RandomSource randomSource, BlockPos blockPos, BlockState blockState) {
+        return true;
+    }
+
+    public void performBonemeal(ServerLevel level, RandomSource randomSource, BlockPos blockPos, BlockState blockState) {
+        level.addFreshEntity(new ItemEntity(level, blockPos.getX(), blockPos.getY(), blockPos.getZ(), new ItemStack(ModItems.NETTLE_LEAF.get())));
     }
 }

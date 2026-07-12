@@ -1,8 +1,7 @@
 package net.valerist.nephrolepis.block.custom;
 
-import net.minecraft.client.particle.Particle;
+
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -23,9 +22,8 @@ import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.client.event.sound.SoundEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.valerist.nephrolepis.item.ModItems;
+import net.valerist.nephrolepis.block.ModBlocks;
+import net.valerist.nephrolepis.tag.ModTags;
 
 
 public class PuffballBlock extends RotationalBlock implements BonemealableBlock{
@@ -38,8 +36,9 @@ public class PuffballBlock extends RotationalBlock implements BonemealableBlock{
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         BlockPos below = pos.below();
         BlockState stateBelow = level.getBlockState(below);
+        boolean dirt = stateBelow.is(ModTags.Blocks.SUBSTRATE);
 
-        return stateBelow.isSolidRender(level, below);
+        return dirt;
     }
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
@@ -70,6 +69,6 @@ public class PuffballBlock extends RotationalBlock implements BonemealableBlock{
     }
 
     public void performBonemeal(ServerLevel level, RandomSource randomSource, BlockPos blockPos, BlockState blockState) {
-        level.addFreshEntity(new ItemEntity(level, blockPos.getX(), blockPos.getY(), blockPos.getZ(), new ItemStack(ModItems.FERN_LEAF.get())));
+        level.addFreshEntity(new ItemEntity(level, blockPos.getX(), blockPos.getY(), blockPos.getZ(), new ItemStack(ModBlocks.GIANT_PUFFBALL.get())));
     }
 }

@@ -1,0 +1,7 @@
+{
+  "type": "forge:add_features",
+  "biomes": ["minecraft:bamboo_jungle","minecraft:jungle","minecraft:sparse_jungle", "minecraft:swamp",
+    "minecraft:mangrove_swamp", "minecraft:dark_forest"],
+  "features": "nephrolepis:fern_placed",
+  "step": "raw_generation"
+}

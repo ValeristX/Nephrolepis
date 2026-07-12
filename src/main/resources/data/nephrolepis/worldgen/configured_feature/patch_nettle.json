@@ -1,0 +1,83 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "tries": 60,
+    "xz_spread": 6,
+    "y_spread": 6,
+    "feature": {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "config": {
+          "to_place": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "nephrolepis:stinging_nettle"
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:would_survive",
+            "state": {
+              "Name": "nephrolepis:stinging_nettle"
+            }
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:any_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  1,
+                  0,
+                  -1
+                ],
+                "tag": "minecraft:logs"
+              },
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  -1,
+                  0,
+                  -1
+                ],
+                "tag": "minecraft:logs"
+              },
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  -1,
+                  0,
+                  1
+                ],
+                "tag": "minecraft:logs"
+              },
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  -1,
+                  0,
+                  -1
+                ],
+                "tag": "minecraft:logs"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
