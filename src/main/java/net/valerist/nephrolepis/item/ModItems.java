@@ -6,6 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.valerist.nephrolepis.Nephrolepis;
+import net.valerist.nephrolepis.item.custom.GrassBladeItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -16,7 +17,7 @@ public class ModItems {
     public static final RegistryObject<Item> NETTLE_LEAF = ITEMS.register("nettle_leaf",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> GRASS_BLADE = ITEMS.register("grass_blade",
-            () -> new Item(new Item.Properties()));
+            () -> new GrassBladeItem(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
