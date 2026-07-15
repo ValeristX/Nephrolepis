@@ -9,7 +9,11 @@
     "nephrolepis:tiny_grass",
     "nephrolepis:tiny_grass_edge",
     "nephrolepis:giant_puffball",
+    "nephrolepis:grass_blade",
     "minecraft:grass",
-    "minecraft:tall_grass"
+    "minecraft:tall_grass",
+    "minecraft:fern",
+    "minecraft:large_fern",
+    "minecraft:vines"
   ]
 }

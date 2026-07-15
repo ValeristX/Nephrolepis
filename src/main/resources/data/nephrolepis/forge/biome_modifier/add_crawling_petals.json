@@ -2,5 +2,5 @@
   "type": "forge:add_features",
   "biomes": ["minecraft:swamp", "minecraft:mangrove_swamp"],
   "features": "nephrolepis:crawling_petals_placed",
-  "step": "raw_generation"
+  "step": "vegetal_decoration"
 }

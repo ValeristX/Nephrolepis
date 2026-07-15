@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "nephrolepis:grass_blade"
+    },
+    {
+      "item": "nephrolepis:grass_blade"
+    },
+    {
+      "item": "nephrolepis:grass_blade"
+    }
+  ],
+  "result": {
+    "item": "minecraft:grass"
+  }
+}

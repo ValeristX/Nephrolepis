@@ -3,5 +3,5 @@
   "biomes": ["minecraft:taiga", "minecraft:old_growth_pine_taiga","minecraft:old_growth_spruce_taiga",
     "minecraft:dark_forest", "minecraft:windswept_hills"],
   "features": "nephrolepis:nettle_placed",
-  "step": "raw_generation"
+  "step": "vegetal_decoration"
 }

@@ -1,4 +1,4 @@
-// 1.20.1	2026-07-12T16:41:30.5805407	Loot Tables
+// 1.20.1	2026-07-15T23:04:02.0132924	Loot Tables
 d0b3ac48c95265a0cf358c4fa57c835eed869920 data/nephrolepis/loot_tables/blocks/crawling_petals.json
 e06444562d31bd3e0b73a46cdb45f16bfde2331b data/nephrolepis/loot_tables/blocks/fern.json
 d9b39d32433cd9ec343d97e8279c656d80d3506e data/nephrolepis/loot_tables/blocks/giant_puffball.json
@@ -6,5 +6,5 @@ d9b39d32433cd9ec343d97e8279c656d80d3506e data/nephrolepis/loot_tables/blocks/gia
 bf178e94db0e7602918ae8dc2adc85c8cebe18a5 data/nephrolepis/loot_tables/blocks/potted_fern.json
 a5364765793e06daba696d84b1211d15fdb1bbc8 data/nephrolepis/loot_tables/blocks/seed_bench.json
 ba88d638281f7001b41574bb74a583529ca11cd4 data/nephrolepis/loot_tables/blocks/stinging_nettle.json
-3e3568603643fafe06f9c28674018d1b11b8e976 data/nephrolepis/loot_tables/blocks/tiny_grass.json
-3adaa7c7cd7568063f4cd69c22b096fc760f34ac data/nephrolepis/loot_tables/blocks/tiny_grass_edge.json
+16c77dfef464ee350e57d41f6febb32a524d6628 data/nephrolepis/loot_tables/blocks/tiny_grass.json
+2dde0135cb19484f03238599c9d713e36afd57fc data/nephrolepis/loot_tables/blocks/tiny_grass_edge.json
