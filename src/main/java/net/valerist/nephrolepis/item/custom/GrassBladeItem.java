@@ -14,6 +14,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.valerist.nephrolepis.Config;
 import net.valerist.nephrolepis.item.ModItems;
 
 public class GrassBladeItem extends Item {
@@ -31,7 +32,7 @@ public class GrassBladeItem extends Item {
         Block block = blockstate.getBlock();
         Player player = pContext.getPlayer();
 
-        if(item.is(ModItems.GRASS_BLADE.get()) && blockstate.is(Blocks.DIRT)){
+        if(item.is(ModItems.GRASS_BLADE.get()) && blockstate.is(Blocks.DIRT) && (Config.grass_blade_restores_dirt == true)){
             level.setBlockAndUpdate(blockPos, Blocks.GRASS_BLOCK.defaultBlockState());
             item.shrink(1);
             if (player != null){
