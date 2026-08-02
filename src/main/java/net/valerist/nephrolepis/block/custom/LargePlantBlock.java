@@ -1,7 +1,6 @@
 package net.valerist.nephrolepis.block.custom;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
@@ -15,7 +14,6 @@ public class LargePlantBlock extends RotationalBlock {
         super(pProperties);
     }
     // placement rule
-
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         BlockPos below = pos.below();
