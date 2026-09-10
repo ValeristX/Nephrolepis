@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "nephrolepis:block/nest_side_moss",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "nephrolepis:block/nest_side_moss",
+      "y": 0
+    },
+    "facing=south": {
+      "model": "nephrolepis:block/nest_side_moss",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "nephrolepis:block/nest_side_moss",
+      "y": 270
+    }
+  }
+}

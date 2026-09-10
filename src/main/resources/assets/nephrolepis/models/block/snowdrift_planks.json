@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "nephrolepis:block/snowdrift_tiles",
+    "side": "nephrolepis:block/snowdrift_planks"
+  }
+}

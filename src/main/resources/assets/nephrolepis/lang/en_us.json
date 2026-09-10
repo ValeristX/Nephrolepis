@@ -14,5 +14,14 @@
   "block.nephrolepis.crawling_petals": "Crawling Petals",
   "block.nephrolepis.stinging_nettle": "Stinging Nettle",
 
+  "block.nephrolepis.nest_small": "Small Nest",
+  "block.nephrolepis.nest_corner": "Nest Corner",
+  "block.nephrolepis.nest_middle": "Nest Middle",
+  "block.nephrolepis.nest_side": "Nest Side",
+  "block.nephrolepis.nest_small_moss": "Small Moss Nest",
+  "block.nephrolepis.nest_corner_moss": "Moss Nest Corner",
+  "block.nephrolepis.nest_middle_moss": "Moss Nest Middle",
+  "block.nephrolepis.nest_side_moss": "Moss Nest Side",
+
   "creativetab.tutorial_tab": "Nephrolepis"
 }
