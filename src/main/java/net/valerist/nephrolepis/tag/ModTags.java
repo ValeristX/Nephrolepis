@@ -12,6 +12,8 @@ import net.valerist.nephrolepis.Nephrolepis;
 public class ModTags {
     public static class Blocks{
         public static final TagKey<Block> SUBSTRATE = tag("substrate");
+        public static final TagKey<Block> SUBSTRATE_SNOW = tag("substrate_snow");
+        public static final TagKey<Block> SUBSTRATE_SNOWDROP = tag("substrate_snowdrop");
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(Nephrolepis.MODID, name));
         }

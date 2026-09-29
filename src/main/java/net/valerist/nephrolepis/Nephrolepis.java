@@ -55,6 +55,7 @@ public class Nephrolepis
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.FERN.getId(), ModBlocks.POTTED_FERN);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CRAWLING_PETALS.getId(), ModBlocks.POTTED_CRAWLING_PETALS);
         });
         event.enqueueWork(() -> {
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, ModBlocks.SNOWDROP.get().asItem(), ModPotions.FREEZE_RESISTANCE_POTION.get()));

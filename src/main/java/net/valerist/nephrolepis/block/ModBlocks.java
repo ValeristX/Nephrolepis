@@ -1,23 +1,20 @@
 package net.valerist.nephrolepis.block;
 
-import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
-import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.valerist.nephrolepis.Nephrolepis;
 import net.valerist.nephrolepis.block.custom.*;
 import net.valerist.nephrolepis.item.ModItems;
+import net.valerist.nephrolepis.worldgen.tree.SnowdriftTreeGrower;
 
 import java.util.function.Supplier;
 
@@ -35,6 +32,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> POTTED_FERN = BLOCKS.register("potted_fern",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.FERN,
             BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+    public static final RegistryObject<Block> POTTED_CRAWLING_PETALS = BLOCKS.register("potted_crawling_petals",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.CRAWLING_PETALS,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
 
     public static final RegistryObject<Block> TINY_GRASS = registerBlock("tiny_grass",
             () -> new TinyPlantBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion().instabreak().mapColor(MapColor.PLANT)));
@@ -67,6 +67,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> NEST_MIDDLE_MOSS = registerBlock("nest_middle_moss",
             () -> new NestBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noOcclusion().instabreak().mapColor(MapColor.PLANT)));
 
+    public static final RegistryObject<Block> SNOWDRIFT_SAPLING = registerBlock("snowdrift_sapling",
+            () -> new SnowdriftSaplingBlock(new SnowdriftTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+    public static final RegistryObject<Block> SNOWDRIFT_LEAVES = registerBlock("snowdrift_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(MapColor.COLOR_LIGHT_BLUE)));
     public static final RegistryObject<Block> SNOWDRIFT_LOG = registerBlock("snowdrift_log",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).mapColor(MapColor.COLOR_LIGHT_BLUE)));
 
@@ -92,7 +96,7 @@ public class ModBlocks {
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR).mapColor(MapColor.COLOR_LIGHT_BLUE).noOcclusion(), BlockSetType.OAK));
 
     public static final RegistryObject<Block> SNOWDROP = registerBlock("snowdrop",
-            () -> new TinyPlantBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion().instabreak().mapColor(MapColor.PLANT)));
+            () -> new SnowdropBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion().instabreak().mapColor(MapColor.PLANT)));
     public static final RegistryObject<Block> CHANTERELLE = registerBlock("chanterelle",
             () -> new ChanterelleBlock(BlockBehaviour.Properties.copy(Blocks.MUSHROOM_STEM).noOcclusion().mapColor(MapColor.COLOR_ORANGE)));
 

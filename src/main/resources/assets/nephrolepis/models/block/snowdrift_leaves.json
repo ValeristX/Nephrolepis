@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "nephrolepis:block/snowdrift_leaves"
+  }
+}

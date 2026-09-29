@@ -1,0 +1,7 @@
+{
+  "type": "forge:add_features",
+  "biomes": ["minecraft:snowy_slopes", "minecraft:snowy_plains", "minecraft:grove",
+    "minecraft:snowy_taiga","minecraft:ice_spikes", "minecraft:frozen_peaks", "minecraft:jagged_peaks"],
+  "features": "nephrolepis:snowdrop_placed",
+  "step": "vegetal_decoration"
+}
