@@ -2,6 +2,7 @@
   "item.nephrolepis.fern_leaf": "Fern Leaf",
   "item.nephrolepis.nettle_leaf": "Nettle Leaf",
   "item.nephrolepis.grass_blade": "Blade of Grass",
+  "item.nephrolepis.chanterelle_flesh": "Chanterelle Flesh",
   "item.nephrolepis.ghillie_suit_helmet": "Ghillie Suit Hood",
   "item.nephrolepis.ghillie_suit_chestplate": "Ghillie Suit Top",
 
@@ -13,10 +14,17 @@
   "block.nephrolepis.tiny_grass_edge": "Centered Tiny Grass",
   "block.nephrolepis.crawling_petals": "Crawling Petals",
   "block.nephrolepis.stinging_nettle": "Stinging Nettle",
+  "block.nephrolepis.snowdrop": "Snowdrop",
+  "block.nephrolepis.chanterelle": "Chanterelle",
 
   "block.nephrolepis.snowdrift_log": "Snowdrift Log",
   "block.nephrolepis.snowdrift_wood": "Snowdrift Wood",
   "block.nephrolepis.snowdrift_planks": "Snowdrift Planks",
+  "block.nephrolepis.snowdrift_stairs": "Snowdrift Stairs",
+  "block.nephrolepis.snowdrift_slab": "Snowdrift Slab",
+  "block.nephrolepis.snowdrift_fence": "Snowdrift Fence",
+  "block.nephrolepis.snowdrift_fence_gate": "Snowdrift Fence Gate",
+  "block.nephrolepis.snowdrift_door": "Snowdrift Door",
 
   "block.nephrolepis.nest_small": "Small Nest",
   "block.nephrolepis.nest_corner": "Nest Corner",
@@ -26,6 +34,8 @@
   "block.nephrolepis.nest_corner_moss": "Moss Nest Corner",
   "block.nephrolepis.nest_middle_moss": "Moss Nest Middle",
   "block.nephrolepis.nest_side_moss": "Moss Nest Side",
+
+  "effect.nephrolepis.freeze_resistance": "Freeze Resistance",
 
   "creativetab.tutorial_tab": "Nephrolepis"
 }

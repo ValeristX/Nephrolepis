@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "nephrolepis:block/snowdrift_planks",
+    "side": "nephrolepis:block/snowdrift_planks",
+    "top": "nephrolepis:block/snowdrift_tiles"
+  }
+}

@@ -36,4 +36,9 @@ public class TinyPlantBlock extends RotationalBlock {
 
         return dirt;
     }
+
+    @Override
+    public boolean canBeReplaced(BlockState blockstate, BlockPlaceContext context){
+        return true;
+    }
 }

@@ -2,12 +2,16 @@ package net.valerist.nephrolepis;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
-import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionUtils;
+import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -17,8 +21,11 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.valerist.nephrolepis.block.ModBlocks;
+import net.valerist.nephrolepis.effect.ModEffects;
 import net.valerist.nephrolepis.item.ModCreativeModTabs;
 import net.valerist.nephrolepis.item.ModItems;
+import net.valerist.nephrolepis.potion.BetterBrewingRecipe;
+import net.valerist.nephrolepis.potion.ModPotions;
 import org.slf4j.Logger;
 
 @Mod(Nephrolepis.MODID)
@@ -29,9 +36,11 @@ public class Nephrolepis
     public Nephrolepis(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
+        ModEffects.register(modEventBus); // effects
         ModCreativeModTabs.register(modEventBus); // our creative mode tab
         ModItems.register(modEventBus); // items
         ModBlocks.register(modEventBus); // blocks
+        ModPotions.register(modEventBus); // potions
         modEventBus.addListener(this::commonSetup);
 
 
@@ -46,6 +55,10 @@ public class Nephrolepis
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.FERN.getId(), ModBlocks.POTTED_FERN);
+        });
+        event.enqueueWork(() -> {
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, ModBlocks.SNOWDROP.get().asItem(), ModPotions.FREEZE_RESISTANCE_POTION.get()));
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.FREEZE_RESISTANCE_POTION.get(), Items.REDSTONE, ModPotions.FREEZE_RESISTANCE_POTION2.get()));
         });
     }
 

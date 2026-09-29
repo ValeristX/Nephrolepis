@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "nephrolepis:block/snowdrift_slab"
+    },
+    "type=double": {
+      "model": "nephrolepis:block/snowdrift_planks"
+    },
+    "type=top": {
+      "model": "nephrolepis:block/snowdrift_slab_top"
+    }
+  }
+}

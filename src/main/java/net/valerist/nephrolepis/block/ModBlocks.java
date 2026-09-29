@@ -1,11 +1,13 @@
 package net.valerist.nephrolepis.block;
 
 import net.minecraft.client.renderer.BiomeColors;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -73,6 +75,26 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SNOWDRIFT_PLANKS = registerBlock("snowdrift_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+
+    public static final RegistryObject<Block> SNOWDRIFT_STAIRS = registerBlock("snowdrift_stairs",
+            () -> new StairBlock(() -> ModBlocks.SNOWDRIFT_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
+
+    public static final RegistryObject<Block> SNOWDRIFT_SLAB = registerBlock("snowdrift_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+
+    public static final RegistryObject<Block> SNOWDRIFT_FENCE = registerBlock("snowdrift_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+
+    public static final RegistryObject<Block> SNOWDRIFT_FENCE_GATE = registerBlock("snowdrift_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE).mapColor(MapColor.COLOR_LIGHT_BLUE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+
+    public static final RegistryObject<Block> SNOWDRIFT_DOOR = registerBlock("snowdrift_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR).mapColor(MapColor.COLOR_LIGHT_BLUE).noOcclusion(), BlockSetType.OAK));
+
+    public static final RegistryObject<Block> SNOWDROP = registerBlock("snowdrop",
+            () -> new TinyPlantBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion().instabreak().mapColor(MapColor.PLANT)));
+    public static final RegistryObject<Block> CHANTERELLE = registerBlock("chanterelle",
+            () -> new ChanterelleBlock(BlockBehaviour.Properties.copy(Blocks.MUSHROOM_STEM).noOcclusion().mapColor(MapColor.COLOR_ORANGE)));
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
