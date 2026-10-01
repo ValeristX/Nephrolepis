@@ -68,17 +68,22 @@ public class ModBlocks {
             () -> new NestBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noOcclusion().instabreak().mapColor(MapColor.PLANT)));
 
     public static final RegistryObject<Block> SNOWDRIFT_SAPLING = registerBlock("snowdrift_sapling",
-            () -> new SnowdriftSaplingBlock(new SnowdriftTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+            () -> new SnowdriftSaplingBlock(new SnowdriftTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion().mapColor(MapColor.COLOR_LIGHT_BLUE)));
     public static final RegistryObject<Block> SNOWDRIFT_LEAVES = registerBlock("snowdrift_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+
     public static final RegistryObject<Block> SNOWDRIFT_LOG = registerBlock("snowdrift_log",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).mapColor(MapColor.COLOR_LIGHT_BLUE)));
-
+            () -> new SnowdriftWoodBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).mapColor(MapColor.COLOR_LIGHT_BLUE)));
     public static final RegistryObject<Block> SNOWDRIFT_WOOD = registerBlock("snowdrift_wood",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+            () -> new SnowdriftWoodBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).mapColor(MapColor.COLOR_LIGHT_BLUE)));
 
+    public static final RegistryObject<Block> STRIPPED_SNOWDRIFT_LOG = registerBlock("stripped_snowdrift_log",
+            () -> new SnowdriftWoodBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+
+    public static final RegistryObject<Block> STRIPPED_SNOWDRIFT_WOOD = registerBlock("stripped_snowdrift_wood",
+            () -> new SnowdriftWoodBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).mapColor(MapColor.COLOR_LIGHT_BLUE)));
     public static final RegistryObject<Block> SNOWDRIFT_PLANKS = registerBlock("snowdrift_planks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+            () -> new SnowdriftPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_LIGHT_BLUE)));
 
     public static final RegistryObject<Block> SNOWDRIFT_STAIRS = registerBlock("snowdrift_stairs",
             () -> new StairBlock(() -> ModBlocks.SNOWDRIFT_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
@@ -94,6 +99,12 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SNOWDRIFT_DOOR = registerBlock("snowdrift_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR).mapColor(MapColor.COLOR_LIGHT_BLUE).noOcclusion(), BlockSetType.OAK));
+    public static final RegistryObject<Block> SNOWDRIFT_TRAPDOOR = registerBlock("snowdrift_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR).mapColor(MapColor.COLOR_LIGHT_BLUE).noOcclusion(), BlockSetType.OAK));
+    public static final RegistryObject<Block> SNOWDRIFT_PRESSURE_PLATE = registerBlock("snowdrift_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE).mapColor(MapColor.COLOR_LIGHT_BLUE).noOcclusion(), BlockSetType.OAK));
+    public static final RegistryObject<Block> SNOWDRIFT_BUTTON = registerBlock("snowdrift_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON).mapColor(MapColor.COLOR_LIGHT_BLUE).noOcclusion(), BlockSetType.OAK, 10, true));
 
     public static final RegistryObject<Block> SNOWDROP = registerBlock("snowdrop",
             () -> new SnowdropBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).noCollission().noOcclusion().instabreak().mapColor(MapColor.PLANT)));

@@ -28,6 +28,22 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.POTTED_CRAWLING_PETALS.get(), createPotFlowerItemTable(ModBlocks.CRAWLING_PETALS.get()));
         this.dropSelf(ModBlocks.GIANT_PUFFBALL.get());
         this.dropOther(ModBlocks.STINGING_NETTLE.get(), ModItems.NETTLE_LEAF.get());
+
+        this.dropSelf(ModBlocks.SNOWDRIFT_LOG.get());
+        this.dropSelf(ModBlocks.SNOWDRIFT_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_SNOWDRIFT_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_SNOWDRIFT_WOOD.get());
+        this.dropSelf(ModBlocks.SNOWDRIFT_PLANKS.get());
+        this.dropSelf(ModBlocks.SNOWDRIFT_STAIRS.get());
+        this.dropSelf(ModBlocks.SNOWDRIFT_FENCE.get());
+        this.dropSelf(ModBlocks.SNOWDRIFT_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.SNOWDRIFT_DOOR.get());
+        this.dropSelf(ModBlocks.SNOWDRIFT_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.SNOWDRIFT_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.SNOWDRIFT_BUTTON.get());
+
+        this.add(ModBlocks.SNOWDRIFT_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.SNOWDRIFT_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     @Override

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "nephrolepis:block/snowdrift_pressure_plate"
+    },
+    "powered=true": {
+      "model": "nephrolepis:block/snowdrift_pressure_plate_down"
+    }
+  }
+}

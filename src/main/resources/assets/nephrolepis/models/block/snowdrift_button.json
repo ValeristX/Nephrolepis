@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "nephrolepis:block/snowdrift_tiles"
+  }
+}

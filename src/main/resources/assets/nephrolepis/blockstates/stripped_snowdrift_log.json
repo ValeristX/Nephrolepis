@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "nephrolepis:block/stripped_snowdrift_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "nephrolepis:block/stripped_snowdrift_log"
+    },
+    "axis=z": {
+      "model": "nephrolepis:block/stripped_snowdrift_log",
+      "x": 90
+    }
+  }
+}
